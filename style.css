@@ -1,0 +1,93 @@
+:root {
+    --body-bg-color: #FAF7FD;
+    --purple: #BB99DD;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 300px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg-color);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 30px 30px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    outline: 2px var(--purple) solid;
+    outline-offset: 3px;
+    overflow: hidden;
+    max-width: 180px;
+    height: 180px;
+}
+
+.profile-username > a {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: 300;
+    line-height: 24px;
+}
+
+main {
+    width: 100%;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+main > .link-item {
+    color: var(--purple);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+main > .link-item > div {
+    border: 2px var(--purple) solid;
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+main .link-item:hover div {
+    background-color: var(--purple);
+    color: white;
+}
+
+footer {
+    display: flex;
+    gap: 25px;
+}
+
+@media (max-height: 480px) {
+    body {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-height: 350px) {
+    footer {
+        margin-left: 50px;
+        flex-direction: column;
+    }
+}
